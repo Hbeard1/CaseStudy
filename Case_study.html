@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Automating Logistical Email Communications at HelloFresh</title>
+    <style>
+        html {
+            height: 100%; /* Full height for html */
+        }
+        body {
+            min-height: 100%; /* Minimum full height for body */
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            flex: 1; /* Flex grow to take available space */
+            padding: 20px; /* Padding for content */
+            width: 80%; /* Width of the container */
+            margin: auto; /* Center the container */
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: auto; /* Push the footer to the bottom */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background: #20c997;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Case Study: Automating Logistical Email Communications at HelloFresh</h1>
+</header>
+<div class="container">
+  <section>
+      <h2>Overview</h2>
+      <p>This case study outlines the transformation of HelloFresh’s logistical communication from a labor-intensive manual process to a fully automated system. The initiative led to significant time savings and enhanced efficiency for the Customer Care and Logistics teams.</p>
+
+      <h2>Challenge</h2>
+      <p>Initially, the logistical communication process at HelloFresh was manual and cumbersome. The Logistics team compiled a list of users experiencing updates (like shipping delays or confirmations) and shared this list with the Customer Care team. The Customer Care team then manually uploaded this data to Salesforce Marketing Cloud (SFMC), triggering an automation to send out logistical emails. This process was not only time-consuming but also prone to errors, leading to potential customer dissatisfaction due to delayed communications.</p>
+
+      <h2>Solution</h2>
+      <p>To address these challenges, I collaborated with the Data Management team to develop and update a tracker event in SFMC that automatically sent payloads whenever there was an update in the shipment status. This direct integration aimed to eliminate manual inputs and streamline the entire communication process.</p>
+
+      <h2>Implementation</h2>
+      <ol>
+    <li>
+        <strong>Event Trigger Optimization:</strong>
+        <ul>
+            <li>Audited the event triggers to identify and eliminate duplicate events caused by repeated carrier scans.</li>
+            <li>Implemented a logging mechanism to detect and filter out duplicate payloads, ensuring each customer received unique and relevant updates.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Journey Customization:</strong>
+        <ul>
+            <li>Designed a specialized journey for shipment and other logistical emails that incorporated logic to check for duplicates before sending communications.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Reporting Enhancements:</strong>
+        <ul>
+            <li>Developed two distinct reports to cater to the unique needs of the Customer Care and Logistics teams:</li>
+            <li>A real-time updated report for Customer Care, refreshed hourly to append new users.</li>
+            <li>A twice-daily updated report for the Logistics team, rewritten each time to include the necessary data from the previous night and the current morning/afternoon.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Automation and Archiving:</strong>
+        <ul>
+            <li>Leveraged Automation Studio to schedule and send these reports directly to FTP, allowing for effective data management and archiving without overloading the SFMC data extensions.</li>
+        </ul>
+    </li>
+</ol>
+
+
+      <h2>Results</h2>
+      <ul>
+        <li><p>The automation of the logistical email communications process resulted in an annual saving of approximately 728 hours across the Customer Care and Logistics teams.</p></li>
+        <li><p>Real-time communication with customers regarding their shipments, enhancing customer satisfaction.</p></li>
+        <li><p>Efficient data management and reduced risk of errors through automated systems.</p></li>
+
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>The project not only streamlined internal processes but also improved the timeliness and accuracy of communications to customers, reflecting HelloFresh’s commitment to operational excellence and customer service.</p>
+
+      <a href="https://eddiebeard.dev/" class="btn">Back to Portfolio</a>
+  </section>
+</div>
+
+<footer>
+    <p>Heriberto Beard's Portfolio © 2024</p>
+</footer>
+
+</body>
+</html>
